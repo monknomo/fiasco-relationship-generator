@@ -1,4 +1,12 @@
-{"playsetUrl":"http://www.bullypulpitgames.com/downloads/index.php?cat=7#94",
-"fiascoUrl":"http://www.bullypulpitgames.com/games/fiasco/"
-"creator":"Chris Bennett",
-"movies":["Cuban Rebel Girls(1959)", "I Am Cuba (1964)", "Our Man in Havana (1959)", "The Godfather Part II (1974)"]}
+{  
+    "playsetUrl":"http://www.bullypulpitgames.com/downloads/index.php?cat=7#94",
+    "fiascoUrl":"http://www.bullypulpitgames.com/games/fiasco/",
+    "creator":"Chris Bennett",
+    "movies":[  
+        "Cuban Rebel Girls(1959)",
+        "I Am Cuba (1964)",
+        "Our Man in Havana (1959)",
+        "The Godfather Part II (1974)"
+    ],
+    "playsetName":"Havana 1953"
+}

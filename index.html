@@ -2,7 +2,7 @@
     <head>
         <script src="phaser.min.js"></script>
         <script>
-            var game = new Phaser.Game(1200, 1000, Phaser.CANVAS, 'phaser-example', { create: create, preload:preload, update:update }, true);
+            var game = new Phaser.Game(Math.floor(.75*Math.max(document.documentElement.clientWidth, window.innerWidth || 0)), Math.floor(.75*Math.max(document.documentElement.clientHeight, window.innerHeight || 0)), Phaser.CANVAS, 'phaser-example', { create: create, preload:preload, update:update }, true);
             var relationships = {"Family":["Step-siblings", "Ne'r-do-well cousins", "Estranged couple", "Separated at birth", "Father/mother and eldest son", "Aunt/uncle and nephew/niece"], 
                 "Work":["Newspaper writer and 'source'", "Model and photographer", "Front desk employee and nemesis", "Entertainer and favorite customer", "Doctor and patient", "Musicians"], 
                 "Visitors":["What are we smuggling this time?", "Tour guide and tourist", "Retirees", "Money burning a hole in their pockets", "Political exiles", "Looking for the 'real' Havana"], 
@@ -44,6 +44,23 @@
             
             function preload(){
                 game.load.image('circle', 'circle.png');
+                resizePhaserGame();
+            }
+            
+            function create() {
+                
+                game.physics.startSystem(Phaser.Physics.P2JS);
+                style = { font: "12px Arial", fill: "#000000", align: "center" };       
+                
+                
+                
+                
+                playerRelationships = game.add.physicsGroup(Phaser.Physics.P2);
+                players = game.add.physicsGroup(Phaser.Physics.P2);
+                generateRelationships();
+                            
+                
+
             }
             
             function handleNumPlayerButton(number){
@@ -61,11 +78,17 @@
                 playerRelationships.removeAll(true);
                 players.removeAll(true);
                 var step = (2*Math.PI) / numPlayers;
-                var radius = 300;
+                var radius = game.width/4;
                 var relationshipAngle = .5;
                 var playerAngle = 0;
                 var springLength = 1.12*Math.PI*radius / numPlayers                //2*radius*Math.sin((relationshipAngle - playerAngle)/2);
-                console.log(springLength);
+                
+                var circles = game.add.graphics(game.world.centerX, game.world.centerY);
+                // add first 1px wide unfilled red circle with a radius of 50 at the center (0, 0) of the graphics object
+                circles.beginFill( 0xbbbbbb, 1);
+                circles.drawCircle(0, 0, radius*1.40);
+                circles.alpha=.4
+                
                 for(var i = 0; i < numPlayers; i++){   
                     var x = Math.round(game.world.width/2 + radius * Math.cos(playerAngle)),
                         y = Math.round(game.world.height/2 + radius * Math.sin(playerAngle));
@@ -124,18 +147,15 @@
 
                 }  
             }
-
-            function create() {
-                game.physics.startSystem(Phaser.Physics.P2JS);
-                style = { font: "16px Arial", fill: "#000000", align: "center" };       
-
-                playerRelationships = game.add.physicsGroup(Phaser.Physics.P2);
-                players = game.add.physicsGroup(Phaser.Physics.P2);
-                generateRelationships();
-                            
-                
-
+            
+            function resizePhaserGame(){
+                var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+                var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+                game.width = Math.floor(w*.5);
+                game.height = Math.floor(h*.5);
             }
+
+            
             
             function update(){
                 
@@ -153,7 +173,7 @@
             }
         </script>
     </head>
-    <body>
+    <body onresize="resizePhaserGame()">
         <h1>Fiasco Generator</h1>
         <select>
             <option>Havana, Cuba</option>

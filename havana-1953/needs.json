@@ -1,7 +1,58 @@
-{"To get out":["of Cuba, forever", "of your 'prison'", "of your oblications", "of the Family", "from under their thumb", "of sight"],
-                "To get even":["with the Batista government", "with a business partner", "with the Americans", "with the secret police", "with Meyer Lansky, 'the Mob's accountant'", "with a rival"],
-                "To get rich":["through the Mob", "by eliminating competition", "by any means necessary", "by fleecing the rich tourists", "by running guns to the guerrillas", "from the spin of the roulette wheel"],
-                "To get respect":["from your family", "from the citizens of Cuba", "from your lover", "from Fidel Castro, guerilla leader", "from your kids", "from the voices inside your head"],
-                "To get the truth":["about what happened to your brother", "about what goes on in that vile place", "about General Batista's secret police", "about why she left you", "about Cuba's past", "about the Mob's dirty dealings"],
-                "To get ahold of":["the papers that will prove your innocence", "your lover, for just one night", "the personwho made your father disappear", "a rich American", "enough drugs to make you forget", "the guns that will set Cuba free"],
-                "broadCategories":["To get out", "To get even", "To get rich", "To get respect", "To get the truth", "To get ahold of"]}
+{  
+    "To get out":[  
+        "of Cuba, forever",
+        "of your 'prison'",
+        "of your oblications",
+        "of the Family",
+        "from under their thumb",
+        "of sight"
+    ],
+    "To get even":[  
+        "with the Batista government",
+        "with a business partner",
+        "with the Americans",
+        "with the secret police",
+        "with Meyer Lansky, 'the Mob's accountant'",
+        "with a rival"
+    ],
+    "To get rich":[  
+        "through the Mob",
+        "by eliminating competition",
+        "by any means necessary",
+        "by fleecing the rich tourists",
+        "by running guns to the guerrillas",
+        "from the spin of the roulette wheel"
+    ],
+    "To get respect":[  
+        "from your family",
+        "from the citizens of Cuba",
+        "from your lover",
+        "from Fidel Castro, guerilla leader",
+        "from your kids",
+        "from the voices inside your head"
+    ],
+    "To get the truth":[  
+        "about what happened to your brother",
+        "about what goes on in that vile place",
+        "about General Batista's secret police",
+        "about why she left you",
+        "about Cuba's past",
+        "about the Mob's dirty dealings"
+    ],
+    "To get ahold of":[  
+        "the papers that will prove your innocence",
+        "your lover, for just one night",
+        "the personwho made your father disappear",
+        "a rich American",
+        "enough drugs to make you forget",
+        "the guns that will set Cuba free"
+    ],
+    "broadCategories":[  
+        "To get out",
+        "To get even",
+        "To get rich",
+        "To get respect",
+        "To get the truth",
+        "To get ahold of"
+    ]
+}
