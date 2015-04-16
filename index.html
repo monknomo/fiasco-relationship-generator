@@ -45,6 +45,7 @@
             function preload(){
                 game.load.image('circle', 'circle.png');
                 resizePhaserGame();
+                
             }
             
             function create() {
@@ -57,10 +58,22 @@
                 
                 playerRelationships = game.add.physicsGroup(Phaser.Physics.P2);
                 players = game.add.physicsGroup(Phaser.Physics.P2);
+                getPlaysetInfo();
                 generateRelationships();
                             
                 
 
+            }
+            
+            function getPlaysetInfo(){
+                var xmlhttp=new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function(){
+                    if (xmlhttp.readyState==4 && xmlhttp.status==200){
+                        alert(xmlhttp.responseText);
+                    }
+                }
+                xmlhttp.open("GET","havana-1953/needs.json",true);
+                xmlhttp.send();
             }
             
             function handleNumPlayerButton(number){
