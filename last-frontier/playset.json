@@ -1,0 +1,247 @@
+{  
+    "metadata":{  
+        "playsetUrl":"http://www.bullypulpitgames.com/downloads/index.php?cat=7#94",
+        "fiascoUrl":"http://www.bullypulpitgames.com/games/fiasco/",
+        "creator":"Jason Morningstar",
+        "movies":[  
+            "Insomnia",
+            "Northern Exposure (TV)",
+            "Timber Tramps"
+        ],
+        "boilerplate":"This playset is an accessory for the Fiasco role-playing game by Bully Pulpit Games.  This playset is copyright 2010 by Jason Morningstar. Fiasco is copyright 2009 by Jason Morningstar. All rights are reserved.  For more information about Fiasco or to download other playsets and materials, visit www.bullypulpitgames.com.  If you'd like to create your own playset or other Fiasco-related content, we'd like to help. Write us at info@bullypulpitgames.com.",
+        "score":"Adding some pitch black and blood red to the great white north ... fishing villages and fishing village idiots, timber contracts and factory ships, State Troopers in floatplanes and the weird guys who hide when they fly over - set among the emerald forests of southeast Alaska's vast archipelago, this playset drags an offbeat but familiar setting into the crosshairs.",
+        "playsetName":"Last Frontier"
+    },
+    "needs":{  
+        "To get even":[  
+            "with a rival",
+            "with a state or federal agency",
+            "with a state trooper",
+            "with this village for what it has turned you into",
+            "with this village, and all the nosy small people in it",
+            "with a family member"
+        ],
+        "To get the truth":[  
+            "about this village's dark past",
+            "about the borough's political corruption",
+            "about Jimmy May's medical records",
+            "about someone's infidelity",
+            "about your real parents",
+            "about the thing you saw in Kaku Inlet"
+        ],
+        "To get respect":[  
+            "from this town, by bringing down the fishing monopoly",
+            "from this town, by teaching them to be afraid",
+            "from your lover, by proving your devotion",
+            "from the police, by turning in your own kin to the state troopers",
+            "from a family member, by doing what they never could",
+            "from yourself, by solving the problem permanently"
+        ],
+        "To get laid":[  
+            "by that special someone who doesn't even know you exist",
+            "in the middle of the Russian Orthodox church",
+            "by an old lover, to see if sparks fly again",
+            "in a drunken stupor, by whoever you end up with",
+            "by someone who can really grease the wheels for your project",
+            "to prove you've still got it"
+        ],
+        "To get out":[  
+            "of this town, because you have big dreams",
+            "of this town, to escape family and tradition",
+            "of a relationship",
+            "of a business entanglement",
+            "of an obligation to a dangerous outsider",
+            "of an obligation to your family"
+        ],
+        "To get rich":[  
+            "through stealing a drug stash",
+            "through selling illegally-cleared timber",
+            "through defrauding eco-tourists",
+            "through the death of a native elder",
+            "through ripping off the village emergency fund",
+            "through stealing a pile of fishing boat IFQ money"
+        ],
+        "broadCategories":[  
+            "To get even",
+            "To get the truth",
+            "To get respect",
+            "To get laid",
+            "To get out",
+            "To get rich"
+        ]
+    },
+    "relationships":{  
+        "Family":[  
+            "Unrelated, but still family",
+            "Siblings",
+            "Parent and adopted child",
+            "Parent and son/daughter-in-law",
+            "Distant relatives through obscure lineage",
+            "Grandparent/grandchild"
+        ],
+        "Friendship":[  
+            "A sourdough and a cheechako",
+            "Old friends back in Juneau",
+            "Stoner pals",
+            "Cheerful competitors",
+            "Friends with benefits",
+            "Ruthless social rivals"
+        ],
+        "Crime":[  
+            "Smuggler and fence/broker",
+            "Gambler and bookie",
+            "Fishing outlaws (quota thieves, endangered species bycatch sellers)",
+            "Grifter and rube",
+            "Hoodlums (thugs, hell-raisers, ass-kickers)",
+            "Drug people (grower, dealer, distributor, user)"
+        ],
+        "Around the Village":[  
+            "Officials (village manager, chief of police)",
+            "Volunteers (Chamber, clubs, cultural heritage association)",
+            "Church folk (deacon, Sunday school teacher, secretary)",
+            "Alcoholic Anonymous/Narconon sponsor and participant",
+            "Representative/citizen (Case worker, parole officer, native corporation official)",
+            "Athletes (recreation league, coach, pick-up games, minor league)"
+        ],
+        "Romance":[  
+            "Current spouses",
+            "Former lovers",
+            "One-time fling",
+            "Crush and object of crush",
+            "Lovers",
+            "Former spouses"
+        ],
+        "Work":[  
+            "Former boat crew",
+            "Co-workers in the village",
+            "Current boat crew",
+            "Skilled work barterers (plumber, carpenter, electrician)",
+            "Salesman and customer",
+            "Professional and client (doctor, lawyer, dealer, wilderness guide)"
+        ],
+        "broadCategories":[  
+            "Family",
+            "Friendship",
+            "Crime",
+            "Around the Village",
+            "Romance",
+            "Work"
+        ]
+    },
+    "totemicObjects":{  
+        "Ugly":[  
+            "Porn stash/sex gear",
+            "Forged PFD check",
+            "Priceless Tlingit artifacts",
+            "Candid videotape of a former Governor",
+            "Drug smuggler's notebook",
+            "Legal notice"
+        ],
+        "Transportation":[  
+            "Old van",
+            "Floatplane",
+            "Skiff with a fiddly outboard",
+            "Moped",
+            "Ocean tug MV Mahasset",
+            "Mint 1967 Plymouth Barracuda notchback"
+        ],
+        "Bear Insurance":[  
+            "Shotgun",
+            "Pepper spray",
+            "Hunting rifle",
+            ".44 Magnum revolver",
+            "Pipe bomb",
+            "Lumberman's Pulaski tool"
+        ],
+        "Dirt":[  
+            "Confidential memo",
+            "Annotated USGS quadrangle map",
+            "Medical billing records",
+            "Love letter",
+            "Property deed",
+            "Stack of photographs"
+        ],
+        "Valuables":[  
+            "Massive water-tight drug stash",
+            "Mason jar filled with pre-revolution Russian gold coins",
+            "Statehood memorabilia collection",
+            "Vintage Aeronca Sedan airplane",
+            "Purebred Weimeraner with an ear tattoo",
+            "Aluminum suitcase full of cash"
+        ],
+        "Sentimental":[  
+            "Newborn baby",
+            "A novel written in longhand",
+            "Old letters from a dead man",
+            "Trophy",
+            "Wedding ring",
+            "Family heirloom no longer in family possession"
+        ],
+        "broadCategories":[  
+            "Ugly",
+            "Transportation",
+            "Bear Insurance",
+            "Dirt",
+            "Valuables",
+            "Sentimental"
+        ]
+    },
+    "locations":{  
+        "First Street":[  
+            "First Street Church of Christ",
+            "Morganson Plumbing and Heating",
+            "Chico's Pizza",
+            "Alaska Magic gifts and cards",
+            "Southeast Federal Credit Union, the only bank in town",
+            "Tanner Marine Insurance"
+        ],
+        "Tongass Avenue":[  
+            "Benny Benson Memorial K-12 school",
+            "The Municipal building, police station, courthouse and city hall",
+            "Pacific Medical Clinic, the only doctor in town",
+            "Dagitgiyaa Native Cultural Center",
+            "Chilkoot Gun and Knife",
+            "Sun Chasers tanning salon and weight loss center"
+        ],
+        "The Harbor":[  
+            "Aboard the purse seiner MV Julie Autumn",
+            "Neptune Aviation Services and state floatplane dock",
+            "Alaska Division of Fisheries office",
+            "VistaPoint processing plant",
+            "Rafter Marine, sales and repair",
+            "Holiday Lines cruise ship terminal and office"
+        ],
+        "Residences":[  
+            "The trailer at the end of Tongass Avenue",
+            "The hermit's shack",
+            "The eco-mansion on Kaku Inlet",
+            "A houseboat",
+            "A subsidized apartment",
+            "A cute clapboard house downtown"
+        ],
+        "The Backcountry":[  
+            "KTA Telecommunications repeater and tower",
+            "The logging camp",
+            "On top of Harriman Peak",
+            "Kelp Bay",
+            "Make Out Point, overlooking town",
+            "The four-wheeler track out to Kaku Inlet"
+        ],
+        "Kaku Inlet":[  
+            "University of Alaska Southeast fisheries research station",
+            "The abandoned cannery",
+            "Blue Raven Lodge",
+            "The pulp mill",
+            "The old cemetary",
+            "The Skinny Dick dam and reservoir"
+        ],
+        "broadCategories":[  
+            "First Street",
+            "Tongass Avenue",
+            "The Harbor",
+            "Residences",
+            "The Backcountry",
+            "Kaku Inlet"
+        ]
+    }
+}
