@@ -2,48 +2,58 @@
     <head>
         <script src="phaser.min.js"></script>
         <script>
-            var game = new Phaser.Game(1200, 1000, Phaser.CANVAS, 'phaser-example', { create: create, preload:preload, update:update }, true);
-            var relationships = {"Family":["Step-siblings", "Ne'r-do-well cousins", "Estranged couple", "Separated at birth", "Father/mother and eldest son", "Aunt/uncle and nephew/niece"], 
-                "Work":["Newspaper writer and 'source'", "Model and photographer", "Front desk employee and nemesis", "Entertainer and favorite customer", "Doctor and patient", "Musicians"], 
-                "Visitors":["What are we smuggling this time?", "Tour guide and tourist", "Retirees", "Money burning a hole in their pockets", "Political exiles", "Looking for the 'real' Havana"], 
-                "Romance":["What happens in Havana...", "Unrequited love", "Newlyweds", "Reunited lovers", "Lothario and innocent", "True believers in love"], 
-                "Crime":["Pickpocket and fence", "Mob boss and underling", "Criminal on the run and private dick", "Casino cheaters", "Corporate Executives", "Loan shark and debtor"], 
-                "Government":["Diplomats", "Boss and sycophant", "Secret policeman and informant", "Bureaucrats", "CIA case officer and double agent", "Secretarial pool"],
-                "broadCategories":["Family", "Work", "Visitors", "Romance", "Crime", "Government"]}
-            var needs = {"To get out":["of Cuba, forever", "of your 'prison'", "of your oblications", "of the Family", "from under their thumb", "of sight"],
-            
-                "To get even":["with the Batista government", "with a business partner", "with the Americans", "with the secret police", "with Meyer Lansky, 'the Mob's accountant'", "with a rival"],
-                "To get rich":["through the Mob", "by eliminating competition", "by any means necessary", "by fleecing the rich tourists", "by running guns to the guerrillas", "from the spin of the roulette wheel"],
-                "To get respect":["from your family", "from the citizens of Cuba", "from your lover", "from Fidel Castro, guerilla leader", "from your kids", "from the voices inside your head"],
-                "To get the truth":["about what happened to your brother", "about what goes on in that vile place", "about General Batista's secret police", "about why she left you", "about Cuba's past", "about the Mob's dirty dealings"],
-                "To get ahold of":["the papers that will prove your innocence", "your lover, for just one night", "the personwho made your father disappear", "a rich American", "enough drugs to make you forget", "the guns that will set Cuba free"],
-                "broadCategories":["To get out", "To get even", "To get rich", "To get respect", "To get the truth", "To get ahold of"]}
-                
-            var locations = {"Havana Proper":["VIP table next to Frank Sinatra's floorshow at Capri Casino", "Crowded cellar rhumba dance club, off Tin Pan Alley", "Smoke-filled newsroom of the Diario Alerta newspaper", "Feared security room of the Montmartre Casino", "Outdoor stage at the Tropicana", "Masonic building on Carlos III Avenue"],
-                "Prado Prominade":["Bridal suite in the Hotel Nacional, wired for sound", "Cafe table attached to a hydraulic lift leading to the basement", "Fausto Theatre at the corner of Prado and Colon", "Switchboard room at the Hotel Sevilla Biltmore", "Sloppy Joe's Bar, innovator of the eponymous sandwich", "Guest car park at the Telegrafo Hotel"],
-                "Seaside Malecon":["Miramar Yacht Club, attended by waiters in white jackets", "Thatched roof cabana on 'La Concha' public beach", "Gentleman's locker room at the Vedado Tennis Club", "Lobby of Dona Marina's palatial bordello", "Beachside grilled seafood vendor, who sees everything", "Betting windows at the Fronton Jai-Alai courts"],
-                "Old Havana":["Hemingway's seat at the Floridita, 'Cradle of the Daiquiri'", "Basement of the Columbus Cathedral", "Gran Teatro de la Habana, home of the National Opera", "Stone battlement of the La Fuerza fortress", "Heavily-guarded Cuban National Bank", "'Misericord' (discipline room) in Santa Clara Convent"],
-                "Barrio Colon":["Aunt Nina club on San Martin St., 'attended by pretty girls'", "Flophouse dive with a spy hole into the adjoining room", "CIA safehouse in seedy apartment building", "Crowded and bloody cockfight in a back-alley", "Casa Marina, luxurious and notorious house of ill-fame", "Bus station at Calle San Lazaro"],
-                "Outside of Havana":["Fidel Castro's guerrilla encampment in the hills", "Leopard cage at the Zoological Park", "Stag film screening room at the Shanghai Theatre", "'Xanadu', palatial DuPont family estate on an isolated beach", "Cheap seats at the Tropic Park baseball stadium", "Abandoned off-shore oil rig owned by Zapata Petroleum"],
-                "broadCategories":["Havana Proper", "Prado Prominade", "Seaside Malecon", "Old Havana", "Barrio Colon", "Outside of Havana"]}
-                
-            var totemicObjects = {"Untoward":["Pictures of high officials in flagrante with the local 'talent'", "Fashion mannequin stuffed full of high-grade marijuana", "Portable film camera hidden inside a Spanish Bible", "Grainy B&W snuff film involving the Chief of Police", "Black book of cabaret girls' names/numbers with star ratings", "Autopsy photos of 'missing' Mafia don"],
-                "Transportation":["Off-white '52 Pontiac two-door with a body in the trunk", "WW2 German U-Boat, sunken in shallow water", "1949 Harley-Davidson cop bike, low on gas", "'Pilar' the finest fishing boat in the harbor", "Street merchant's push-cart with a false bottom", "Motorized float, decorated with ostrich feathers for Carnival"],
-                "Weapon":["Hand-crank generator, used for police 'conversations'", "Crate of .45 US M2 'grease gun' submachine guns", "Bottle of Veuve-Cliquot champagne, on ice", "German SS combat dagger, with blood groove", "Bacardi rum bottle full of ether", "Russian fully automatic 9mm Stechkin APS pistol"],
-                "Information":["Mobster Meyer Lanksy's address book, some names scratched out", "Map of US nuclear weapon sites in Florida", "Payoff list of local officials, with names and prices", "Hand-drawn map to a guerrilla arms cache in the mountains", "Dictaphone sound recording machine", "Cipher book from the Soviet embassy"],
-                "Valuables":["Bag of uncut diamonds in a cold ice chest", "Winning numbers for tomorrow's lottery", "Handful of $1000 chips from the San Souci casino", "Jewel-encrusted box of handmade Partagas cigars", "Pair of Havana Tropicana craps dice, always roll 7 or 11", "Rolex GMT-Master watch; repair tag says 'Che Guevara'"],
-                "Identification":["Calling card of US stripper 'Bubbles' Darlene", "Cuban Secret Police ID card for Bernard Barker", "Surgeon's medical ID from Nacional Hospital", "Cuban visa for 'Jack Rubenstein', marked as 'informer'", "Stolen paybook for Swedish sailor; ship is docked in port", "Soviet diplomatic ID, marked 'Do Not Question or Hinder'"],
-                "broadCategories":["Untoward", "Transportation", "Weapon", "Information", "Valuables", "Identification"]}
-            
+            var game = new Phaser.Game(Math.floor(.75*Math.max(document.documentElement.clientWidth, window.innerWidth || 0)), Math.floor(.75*Math.max(document.documentElement.clientHeight, window.innerHeight || 0)), Phaser.CANVAS, 'phaser-example', { create: create, preload:preload, update:update }, true);
+            var gameMetadata;
+            var relationships;
+            var locations;
+            var needs;
+            var totemicObjects;
             var style;
+            var scenarioInfoStyle;
             var playerRelationships;
             var playerCollisionGroup;
             var relationshipCollisionGroup;
             var numPlayers = 3;
-
+            var scenarioInfoText;
             
             function preload(){
                 game.load.image('circle', 'circle.png');
+                resizePhaserGame();    
+                               
+            }
+            
+            function create() {
+                getPlaysetInfo("havana-1953",function(){
+                    game.physics.startSystem(Phaser.Physics.P2JS);
+                    style = { font: "12px Arial", fill: "#000000", align: "center", wordWrap:true, wordWrapWidth:190 };    
+                    scenarioInfoStyle = { font: "12px Arial", fill: "#000000", align: "left", wordWrap:true, wordWrapWidth:190 };                    
+                    playerRelationships = game.add.physicsGroup(Phaser.Physics.P2);
+                    players = game.add.physicsGroup(Phaser.Physics.P2);     
+                    drawTable();
+                    generateRelationships();
+                });  
+            }
+            
+            function update(){
+                
+            }
+            
+            function getPlaysetInfo(playset, callback){
+                var xmlhttp=new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function(){
+                    if (xmlhttp.readyState==4 && xmlhttp.status==200){
+                        var result = JSON.parse(xmlhttp.responseText);
+                        console.log(result);
+                        relationships = result.relationships;
+                        needs = result.needs;
+                        locations = result.locations;
+                        totemicObjects = result.totemicObjects;
+                        gameMetadata = result.metadata;
+                        callback();
+                    }
+                }
+                xmlhttp.open("GET",playset+"/playset.json",true);
+                xmlhttp.send();
             }
             
             function handleNumPlayerButton(number){
@@ -57,15 +67,25 @@
                     }
             }
             
+            function drawTable(){
+                var circles = game.add.graphics(game.world.centerX, game.world.centerY);
+                // add first 1px wide unfilled red circle with a radius of 50 at the center (0, 0) of the graphics object
+                circles.beginFill( 0x551d1d, 1);
+                circles.drawCircle(0, 0, game.width/5*1.40);
+                circles.alpha=.4
+            }
+            
             function generateRelationships(){
                 playerRelationships.removeAll(true);
                 players.removeAll(true);
+                if(scenarioInfoText)
+                    scenarioInfoText.kill();
                 var step = (2*Math.PI) / numPlayers;
-                var radius = 300;
+                var radius = game.width/5;
                 var relationshipAngle = .5;
                 var playerAngle = 0;
-                var springLength = 1.12*Math.PI*radius / numPlayers                //2*radius*Math.sin((relationshipAngle - playerAngle)/2);
-                console.log(springLength);
+                var springLength = 1.12*Math.PI*radius / numPlayers                //2*radius*Math.sin((relationshipAngle - playerAngle)/2);          
+                
                 for(var i = 0; i < numPlayers; i++){   
                     var x = Math.round(game.world.width/2 + radius * Math.cos(playerAngle)),
                         y = Math.round(game.world.height/2 + radius * Math.sin(playerAngle));
@@ -123,22 +143,22 @@
                     }
 
                 }  
-            }
-
-            function create() {
-                game.physics.startSystem(Phaser.Physics.P2JS);
-                style = { font: "16px Arial", fill: "#000000", align: "center" };       
-
-                playerRelationships = game.add.physicsGroup(Phaser.Physics.P2);
-                players = game.add.physicsGroup(Phaser.Physics.P2);
-                generateRelationships();
-                            
                 
-
+                //print scenario name
+                var scenarioInfo = gameMetadata.playsetName +"\nBy: " +gameMetadata.creator +"\nInspiration: ";
+                for (var movie in gameMetadata.movies){
+                    scenarioInfo += gameMetadata.movies[movie] + "\n";
+                }
+                scenarioInfoText = game.add.text(game.world.centerX, game.world.centerY, scenarioInfo,scenarioInfoStyle);
+                scenarioInfoText.anchor.set(0.5);
+                
             }
             
-            function update(){
-                
+            function resizePhaserGame(){
+                var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+                var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+                game.width = Math.floor(w*.75);
+                game.height = Math.floor(h*.75);
             }
             
             function getRandomSpecific(obj){
@@ -151,12 +171,21 @@
             function d6(){
                 return Math.floor((Math.random() * 6));
             }
+            
+            function handlePlaysetSelectChange(playset){
+            console.log(playset);
+                getPlaysetInfo(playset,function(){
+                    console.log("inside callback");
+                    generateRelationships();
+                }); 
+            }
         </script>
     </head>
-    <body>
+    <body onresize="resizePhaserGame()">
         <h1>Fiasco Generator</h1>
-        <select>
-            <option>Havana, Cuba</option>
+        <select onchange="handlePlaysetSelectChange(value)">
+            <option value="havana-1953" selected>Havana 1953</option>
+            <option value="last-frontier">Last Frontier</option>
         </select>
         <button onclick="generateRelationships()">Regen</button>
         
